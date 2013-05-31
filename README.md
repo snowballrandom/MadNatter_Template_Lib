@@ -3,9 +3,6 @@ Mad Natter Template Library
 
 A simple template library for Codeigniter
 
-/**
- * MadNatter_Template_Lib
- *
     Copyright (C) <2012-2013>  <Kyle Coots>
 
     This program is free software: you can redistribute it and/or modify
@@ -20,13 +17,13 @@ A simple template library for Codeigniter
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
- * An open source Template Library for PHP 5.1.6 or newer
- *
- * @package  	MadNatter_Template_Lib
- * @author		Kyle Coots
- * @copyright	Copyright (c) 2012 - 2013, Mad Natter
- * @since		Version 1.0
- * @filesource
- *
- */
+ 
+    An open source Template Library for PHP 5.1.6 or newer
+ 
+  @package  	MadNatter_Template_Lib
+  @author		Kyle Coots
+  @copyright	Copyright (c) 2012 - 2013, Mad Natter
+  @since		Version 1.0
+  @filesource   https://github.com/snowballrandom/MadNatter_Template_Lib/
+ 
+ 
