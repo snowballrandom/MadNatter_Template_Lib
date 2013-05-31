@@ -1,4 +1,4 @@
-CI_Template_Lib
+Mad Natter Template Library
 ===============
 
 A template library for Codeigniter
