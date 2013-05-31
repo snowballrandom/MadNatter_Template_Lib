@@ -19,11 +19,11 @@ A simple template library for Codeigniter
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  
     An open source Template Library for PHP 5.1.6 or newer
- 
-  @package  	MadNatter_Template_Lib
-  @author		Kyle Coots
-  @copyright	Copyright (c) 2012 - 2013, Mad Natter
-  @since		Version 1.0
-  @filesource   https://github.com/snowballrandom/MadNatter_Template_Lib/
+  
+    @package  	MadNatter_Template_Lib
+    @author		Kyle Coots
+    @copyright	Copyright (c) 2012 - 2013, Mad Natter
+    @since		Version 1.0
+    @filesource https://github.com/snowballrandom/MadNatter_Template_Lib/
  
  
