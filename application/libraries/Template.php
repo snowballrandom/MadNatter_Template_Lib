@@ -29,18 +29,18 @@
 
 class Template{
 	
-	private $template_dir 			= 'template';
-	private $template_index			= 'index.php';
-	private $template_header		= 'header.php';
-	private $template_footer		= 'footer.php';
-	private $template_title 		= 'Mad Natter';
+	private $template_dir 		= 'template';
+	private $template_index		= 'index.php';
+	private $template_header	= 'header.php';
+	private $template_footer	= 'footer.php';
+	private $template_title 	= 'Mad Natter';
 	// View passed in through the load function.
-	private $template_view			= 'welcome_message';
+	private $template_view		= 'welcome_message';
 	
 	private $template_assets_dir    = 'assets';
-	private $template_css			= '';
-	private $template_js			= '';
-	private $template_meta			= '';
+	private $template_css		= '';
+	private $template_js		= '';
+	private $template_meta		= '';
 	
 	public function __construct(){
 		$this->ci =& get_instance();
@@ -52,21 +52,29 @@ class Template{
 	
 	public function load($view='', $view_data=''){
 			
-		if(isset($view) && $view !== ''){
-			
-			$this->template_view = (is_array($view) || is_object($view)) ? $this->template_view : $view;
+		if(isset($view) && $view !== ''){		
+  	$this->template_view = (is_array($view) || is_object($view)) ? $this->template_view : $view;
 		} 
 		
 		$template_data = new stdClass;
-		$template_data->title			= $this->template_title;
-		$template_data->template 		= $this->template_index;
+		$template_data->title		= $this->template_title;
+		$template_data->template	= $this->template_index;
 		$template_data->header_view 	= $this->template_header;
-		$template_data->css				= $this->template_css;
-		$template_data->js				= $this->template_js;
-		$template_data->meta			= $this->template_meta;
-		$template_data->view		 	= $this->template_view;
+		$template_data->css		= $this->template_css;
+		$template_data->js		= $this->template_js;
+		$template_data->meta		= $this->template_meta;
+		$template_data->view		= $this->template_view;
 		$template_data->footer_view 	= $this->template_footer;
-		$template_data->view_data		= $view_data;
+		
+		if(is_array($view_data) || is_object($view_data)){
+			foreach($view_data as $key => $value){	
+				$template_data->$key = $value;
+			}
+		}else{
+				
+			$template_data->view_data = $view_data;
+				
+		}
 		return $template_data;
 	}
 	
