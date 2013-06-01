@@ -26,6 +26,7 @@ A simple template library for Codeigniter
     @since		Version 1.0
     @filesource https://github.com/snowballrandom/MadNatter_Template_Lib/
 
+More complete tutorial can be found over at my blog site http://www.snowballrandom.com/mad-natter-template-library-for-codeigniter/
 
 How to use the Mad Natter Templae Library
 		
