@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <title>Madnatter template lib by snowballrandom</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Madnatter template lib</h1>
+        <h2>A template library for Codeigniter</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/snowballrandom/MadNatter_Template_Lib/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/snowballrandom/MadNatter_Template_Lib/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/snowballrandom/MadNatter_Template_Lib" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a name="mad-natter-template-library" class="anchor" href="#mad-natter-template-library"><span class="octicon octicon-link"></span></a>Mad Natter Template Library</h1>
+
+<p>A simple template library for Codeigniter</p>
+
+<pre><code>Copyright (C) &lt;2012-2013&gt;  &lt;Kyle Coots&gt;
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+
+An open source Template Library for PHP 5.1.6 or newer
+
+@package    MadNatter_Template_Lib
+@author     Kyle Coots
+@copyright  Copyright (c) 2012 - 2013, Mad Natter
+@since      Version 1.0
+@filesource https://github.com/snowballrandom/MadNatter_Template_Lib/
+</code></pre>
+
+<p>More complete tutorial can be found over at my blog site <a href="http://www.snowballrandom.com/mad-natter-template-library-for-codeigniter/">http://www.snowballrandom.com/mad-natter-template-library-for-codeigniter/</a></p>
+
+<p>How to use the Mad Natter Templae Library</p>
+
+<p>We start by loading the template library</p>
+
+<pre><code>$this-&gt;load-&gt;library('template');
+</code></pre>
+
+<p>Or </p>
+
+<pre><code>$autoload['libraries'] = array('template');
+</code></pre>
+
+<p>Now that we have the library loaded we can use it like this.</p>
+
+<pre><code>$template_data = $this-&gt;template-&gt;load('welcome_message');
+
+$this-&gt;load-&gt;view($template_data-&gt;template, $template_data);
+</code></pre>
+
+<p>Adding Css</p>
+
+<p>You css files should be in the directory "/assets/css/". </p>
+
+<p>If your file is in a different location you can use the second param to allow you to specify the exact location. 
+Note: you will need to specify the absolute url if using the second param.</p>
+
+<pre><code>$this-&gt;template-&gt;addcss($src, $remote, $attr);
+</code></pre>
+
+<p>Local file in the "/assets/css/" directory</p>
+
+<pre><code>$this-&gt;template-&gt;addcss('my_css');
+</code></pre>
+
+<p>Notice that there isn't a need to specify the extension (i.e. "my_css.css")</p>
+
+<p>Loading a remote file or file with different extension</p>
+
+<pre><code>$this-&gt;template-&gt;addcss('http://www.example.com/somefolder/someplace/my_css.css', true);
+</code></pre>
+
+<p>Adding extra attributes to the link tag for you css file. You can use an array() or an object.</p>
+
+<pre><code>$attr = array('charset'=&gt;'utf-8');
+
+$this-&gt;template-&gt;addcss('my_css', false, $attr);
+</code></pre>
+
+<p>Will produce:</p>
+
+<pre><code>&lt;link rel="stylesheet" type="text/css" href="http://localhost/assets/css/my_css.css" charset="utf-8" / &gt;
+</code></pre>
+
+<p>Adding Javascript</p>
+
+<p>Adding Java script is exactly the same as adding css</p>
+
+<pre><code>$this-&gt;template-&gt;addjs($src, $remote, $attr);
+</code></pre>
+
+<p>Adding Meta</p>
+
+<pre><code>$this-&gt;template-&gt;addmeta($meta);
+</code></pre>
+
+<p>Adding meta is as simple as passing an array or object to the function</p>
+
+<pre><code>$meta = array('charset'=&gt;'utf-8');
+$this-&gt;template-&gt;addmeta($meta);
+</code></pre>
+
+<p>Will produce:</p>
+
+<pre><code>&lt;meta charset="utf-8" &gt;
+</code></pre>
+
+<p>Or </p>
+
+<pre><code>$meta = new stdClass;
+$meta-&gt;charset = 'utf-8';
+$this-&gt;template-&gt;addmeta($meta);
+</code></pre>
+
+<p>Will produce: </p>
+
+<pre><code>&lt;meta charset="utf-8" &gt;
+</code></pre>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
